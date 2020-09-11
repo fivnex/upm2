@@ -1,0 +1,24 @@
+// UPMScript Example Syntax
+
+function getAppImage: string appImageName;{
+    // This uses UPM specialized functions
+    
+    if: osType != ["Linux", "BSD"];{
+        customErrorOutput("System needs to be Linux or BSD")
+    } else {
+        // the rest of the script
+        getPackage{
+            packageType: APPIMAGE
+            fromRepo: https://appimages.example.com
+            packageName: appImageName
+        }
+    }
+}
+
+function main: noArgs;{
+    print("Example script to get an app image from a custom repo")
+    input("AppImage you want: ", imgName)
+    variable appImageName := imgName.AppImage
+    getAppImage(appImageName)
+    print("Done! Have a good day!")
+}

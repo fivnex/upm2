@@ -1,0 +1,67 @@
+###########
+Basic STDIO
+###########
+
+// See example.upm on a proper file configuration
+
+# INPUT/OUTPUT #
+print("print text on own line")
+input("get input through alphanumeric strings")
+intinput("get input through integers")
+
+# VARIABLES/CONSTANTS #
+// There are four main types of variable: string, int, array, bool/boolean
+// Most C/C++ variable types will also work
+// Some types will have sub-types, like e.array (empty array) is to array
+variable myNumber := 103
+variable int myNumberAgain = 103
+variable myName := "Kai Lyons"
+variable string myNameAgain = "Kai Lyons"
+variable shortArray := [1, 2, 3]
+variable array shortArray = [1, 2, 3]
+variable emptyArray := []
+variable array emptyArray2 = []
+variable e.array emptyArray3
+variable isTrue := true
+variable bool isTrue2 = true
+variable boolean isTrue3 = true 
+constant numberOfSomething := 8
+constant int numberOfSomethingAgain = 0
+constant myArray := [1, 2, 3, 4, 5]
+constant array myArray = [1, 2, 3, 4, 5]
+
+# FUNCTIONS #
+function addTwo: int a, int b;{
+    return a + b
+}
+
+function main: noArgs ;{
+    // This is the main function
+    // It is required in all scripts
+    
+    // Called functions must be defined BEFORE
+    // the main function, or it will not work
+    print(addTwo(12+3))
+}
+
+# LOOPS/STATEMENTS #
+for: i in shortArray;{
+    print(shortArray[i])
+}
+
+// While True, but named "forever"
+forever{
+    // code here
+}
+
+if: isTrue;{
+    // do something
+} elseif: !isTrue;{
+    // do soemthing else
+} else {
+    // do another thing
+}
+
+while: length.shortArray < 2300;{
+    push(randomInt).shortArray
+}
